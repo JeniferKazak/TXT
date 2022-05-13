@@ -1,0 +1,5 @@
+1)Theory and structure of JSON
+2)API testing
+3)Create json in GitBash
+4)Copy json to the local computer from Github
+5)Modified json in GitBash
