@@ -1,0 +1,54 @@
+{
+    "age": "34",
+    "family": {
+        "children": [
+            [
+                "Alex",
+                24
+            ],
+            [
+                "Kate",
+                12
+            ]
+        ],
+        "u_salary_1_5_year": 4000
+    },
+    "name": "Jenifer",
+    "salary": 1000
+}
+
+1. Спарсить response body в json.
+2. Проверить, что name в ответе равно name s request (name вбить руками.)
+3. Проверить, что age в ответе равно age s request (age вбить руками.)
+4. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
+
+let jsonData = pm.response.json();             - 1
+pm.test("Person is Jenifer", function () {    
+    pm.expect(jsonData.name).to.eql("Jenifer");- 2
+    pm.expect(jsonData.age).to.eql("34");      - 3
+    pm.expect(jsonData.salary).to.eql(1000);   - 4
+
+});
+
+5. Спарсить request.(методом POST)
+6. Проверить, что name в ответе равно name s request (name забрать из request.)
+7. Проверить, что age в ответе равно age s request (age забрать из request.)
+8. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+
+let req = request.data                              - 5
+pm.test("Jenifer", function() {
+     pm.expect(jsonData.name).to.eql(req.name);     - 6
+     pm.expect(jsonData.age).to.eql(req.age);       - 7
+     pm.expect(jsonData.salary).to.eql(+req.salary);- 8
+
+});
+
+Вывести в консоль параметр family из response -   console.log(jsonData.family) - jsonData обозначили ранее
+
+Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request) 
+
+pm.test("salary_check", function () {    
+    pm.expect(jsonData.family.u_salary_1_5_year).to.eql(req.salary * 4);
+});
+
+
