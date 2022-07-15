@@ -1,0 +1,7 @@
+1)Чек-лист по регистрационной форме. http://itcareer.pythonanywhere.com/
+
+https://docs.google.com/spreadsheets/d/1WlXPqUw1mxJ1uclArzNg6A4GfiIY3jy2IikAgZzb0SE/edit?pli=1#gid=0
+
+2) Баг-репорт по регистрационной форме http://itcareer.pythonanywhere.com/
+
+https://docs.google.com/document/d/1_B8OB-IyDlvGAOaGPafqjL8MJJ3NIaDTN6Dm-2lrIlA/edit#
